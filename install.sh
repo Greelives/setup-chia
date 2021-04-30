@@ -3,25 +3,6 @@
 
 # Secure Chia server installer for Debian only.
 # https://github.com/greelives/setup-chia
-
-function isRoot() {
-	if [ "$EUID" -ne 0 ]; then
-		return 1
-	fi
-}
-
-function initialCheck() {
-	if ! isRoot; then
-		echo "Sorry, you need to run this as root"
-		exit 1
-	fi
-	if ! tunAvailable; then
-		echo "TUN is not available"
-		exit 1
-	fi
-	checkOS
-}
-
  apt update
  apt-get install --assume-yes wget
 
