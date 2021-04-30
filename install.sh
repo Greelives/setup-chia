@@ -4,8 +4,7 @@
 # Secure Chia server installer for Debian only.
 # https://github.com/greelives/setup-chia
 apt update
-apt-get install --assume-yes wget
-https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 dpkg --install chrome-remote-desktop_current_amd64.deb
 apt install --assume-yes --fix-broken
 DEBIAN_FRONTEND=noninteractive \
